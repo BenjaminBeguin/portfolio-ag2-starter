@@ -1,0 +1,11 @@
+<h1>{{title}}</h1>
+<p>Home Works!</p>
+
+
+<div *ngFor='let work of works' (click)="setwork(work)">
+    {{ work.title }}
+</div>
+
+<one-work *ngIf="slug" slug="{{slug}}"></one-work>
+
+
