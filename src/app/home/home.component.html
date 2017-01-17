@@ -1,8 +1,9 @@
 <h1>{{title}}</h1>
-<p>Home Works!</p>
+<p>Click to select a project</p>
 
 
-<div *ngFor='let work of works' (click)="setwork(work)">
+
+<div *ngFor='let work of works' (click)="setwork(work)" class="worksWrapper">
     {{ work.title }}
 </div>
 

@@ -12,14 +12,14 @@ import { WorksService } from '../works/works.service';
   providers: [WorksService]
 })
 export class HomeComponent implements OnInit {
-	title = "title";
+	title = "Your Home title";
 	works;
 	work;
 
 	private sub: any;
 	private mode: string;
 	index;
-	slug = "p1"
+	slug;
 
 	constructor(private _worksService: WorksService, private location: Location, public route: ActivatedRoute) {
 
@@ -27,8 +27,10 @@ export class HomeComponent implements OnInit {
 	        works => this.works = works,
 	        error => console.error('Error: ' + error),
 	        () => {
-	        	console.log(this.works)
+	        	console.log(this.works[0].slug)
+	        	this.slug = this.works[0].slug
 	        	this.get_slug();
+
 	        }
       );;
 	}
@@ -53,16 +55,15 @@ export class HomeComponent implements OnInit {
 	}
 
 	setwork(data){
-		this.slug= null;
+		this.slug = null;
 
 		setTimeout(() => {
-		  this.slug = data.slug;
+		  	this.slug = data.slug;
 			this.location.replaceState("/" + this.slug);
 		}, 200);
 	}
 
 	arrayObjectIndexOf(myArray, searchTerm, property) {
-		console.log(myArray);
 		if(myArray) {
 		    for(var i = 0, len = myArray.length; i < len; i++) {
 		        if (myArray[i][property] === searchTerm) return i;
