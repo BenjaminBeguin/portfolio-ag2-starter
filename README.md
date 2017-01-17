@@ -1,4 +1,6 @@
-# angular2 portfolio one page - STARTER
+## Benjamin BEGUIN Portfolio WIP
+
+## angular2 portfolio one page - STARTER
 
 - no style, build your own
 - list of project from json
