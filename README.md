@@ -13,7 +13,7 @@
 
 ```bash
 # clone our repo
-$ git clone https://github.com/BenjaminBeguin/portfolio-ag2.git
+$ git clone https://github.com/BenjaminBeguin/portfolio-ag2-starter.git
 
 
 # install the dependencies with npm
